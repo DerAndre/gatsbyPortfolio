@@ -1,5 +1,16 @@
+/*
+ * @Script: index.jsx
+ * @Author: Andre Litty
+ * @Email: alittysw@gmail.com
+ * @Create At: 2020-05-22 22:10:38
+ * @Last Modified By: Andre Litty
+ * @Last Modified At: 2020-05-22 22:10:38
+ * @Description: Footer component.
+ */
 import React from 'react';
 import styled from 'styled-components';
+
+import * as constants from '../../constants';
 
 const Img = styled.img`
   width: 2rem;
@@ -11,7 +22,7 @@ const StyledFooter = styled.footer`
   width: 100%;
   position: fixed;
   bottom: 0px;
-  background-color: cornflowerblue;
+  background-color: ${constants.green};
   padding: 1rem 0 1rem 0;
   text-align: center;
   display: flex;

@@ -1,3 +1,12 @@
+/*
+ * @Script: projectPageTemplate.jsx
+ * @Author: Andre Litty
+ * @Email: alittysw@gmail.com
+ * @Create At: 2020-05-22 22:12:14
+ * @Last Modified By: Andre Litty
+ * @Last Modified At: 2020-05-22 22:12:14
+ * @Description: This is description.
+ */
 import React from 'react';
 import { graphql } from 'gatsby';
 

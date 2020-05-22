@@ -1,13 +1,24 @@
+/*
+ * @Script: index.jsx
+ * @Author: Andre Litty
+ * @Email: alittysw@gmail.com
+ * @Create At: 2020-05-22 22:06:35
+ * @Last Modified By: Andre Litty
+ * @Last Modified At: 2020-05-22 22:40:58
+ * @Description: Header component.
+ */
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import Particles from 'react-particles-js';
 
+import * as constants from '../../constants';
+
 const StyledHeader = styled.header`
-  background: cornflowerblue;
-  margin-bottom: 1.45rem;
-  height: 15vh;
+  background: ${constants.green};
+  height: 10em;
+  width: 100%;
 `;
 
 const H1 = styled.h1`

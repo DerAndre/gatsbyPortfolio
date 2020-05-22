@@ -8,17 +8,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: inherit;
+  background-color: #2b2828;
 }
 p {
   margin: 0;
   padding: 0;
 }
-a,
 p,
 h1 {
   font-family: sans-serif;
+  color: white !important;
 }
 a {
+  font-family: sans-serif;
+  color: white;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }

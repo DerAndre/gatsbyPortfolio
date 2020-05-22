@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Andre Litty`,
+    title: `Andres\' Site`,
     description: `Personal portfolio`,
     author: `Andre Litty`,
   },
@@ -17,7 +17,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data`,
+        path: `${__dirname}/src/data/projects`,
       },
     },
     {

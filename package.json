@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "personal-gatsby-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple portfolio site written with GatsbyJS",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andre Litty <alittysw@gmail.com>",
   "dependencies": {
     "gatsby": "^2.21.35",
     "gatsby-image": "^2.4.4",
@@ -19,6 +19,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-particles-js": "^3.2.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
@@ -29,7 +31,8 @@
     "prettier": "2.0.5"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio"
   ],
   "license": "MIT",
   "scripts": {
@@ -43,9 +46,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/DerAndre/gatsbyPortfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/DerAndre/gatsbyPortfolio/issues"
   }
 }

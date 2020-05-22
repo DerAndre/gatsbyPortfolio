@@ -1,6 +1,19 @@
+/*
+ * @Script: index.jsx
+ * @Author: Andre Litty
+ * @Email: alittysw@gmail.com
+ * @Create At: 2020-05-22 22:06:52
+ * @Last Modified By: Andre Litty
+ * @Last Modified At: 2020-05-22 22:25:48
+ * @Description: Timeline component.
+ */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+import { toggleInfoBox } from '../../state/actions';
+import * as constants from '../../constants';
 
 const Ul = styled.ul`
   margin-left: 0px;
@@ -8,35 +21,36 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-  width: 12em;
-  height: 12em;
+  width: 10em;
+  height: 10em;
   text-align: center;
   line-height: 10em;
   border-radius: 50%;
-  background: dodgerblue;
-  margin: 0 0 2.5em 0;
+  background: ${constants.green};
+  margin: 1em 0 2.5em 0;
   color: white;
   list-style: none;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   &::after {
     content: '';
-    position: relative;
+    position: absolute;
     display: block;
-    bottom: -7em;
-    left: -6em;
+    bottom: -3em;
+    left: 5em;
     width: 0.4em;
     height: 3em;
-    background: dodgerblue;
-    z-index: -1;
+    background: ${constants.green};
   }
   &:last-child::after {
     display: none;
   }
   &:hover {
-    background: rgb(1, 55, 96);
-    box-shadow: 0 10px 30px rgb(1, 55, 96);
+    background: ${constants.red};
+    box-shadow: 0 0 10em 2em ${constants.red};
+    cursor: pointer;
   }
 `;
 
@@ -47,21 +61,29 @@ const TimeLineText = styled.p`
   margin: 0 5px 0 5px;
 `;
 
-const Img = styled.img`
-  width: 6rem;
-`;
-
-const Timeline = ({ data = [], image, altText = 'icon' }) => {
+const Timeline = ({ dispatch, data = [], image }) => {
   return (
     <Ul>
-      <Img src={image} alt={altText} />
+      {image}
       {data.map((entry, id) => (
-        <Li key={id}>
+        <Li
+          key={id}
+          onClick={() =>
+            dispatch(
+              toggleInfoBox(
+                true,
+                entry.title,
+                entry.description,
+                entry.longDescription,
+              ),
+            )
+          }
+        >
           <TimeLineText>
-            <strong>{entry.node.frontmatter.title}</strong>
+            <strong>{entry.date.split('-')[0]}</strong>
             <br />
             <br />
-            {entry.node.frontmatter.description}
+            <strong>{entry.title}</strong>
           </TimeLineText>
         </Li>
       ))}
@@ -75,4 +97,4 @@ Timeline.propTypes = {
   altText: PropTypes.string,
 };
 
-export default Timeline;
+export default connect(null, null)(Timeline);

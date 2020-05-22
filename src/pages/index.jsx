@@ -1,3 +1,12 @@
+/*
+ * @Script: index.jsx
+ * @Author: Andre Litty
+ * @Email: alittysw@gmail.com
+ * @Create At: 2020-05-22 22:11:08
+ * @Last Modified By: Andre Litty
+ * @Last Modified At: 2020-05-22 23:00:52
+ * @Description: Main site.
+ */
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -7,41 +16,35 @@ import Card from '../components/Card';
 import CardContainer from '../components/CardContainer';
 import Timeline from '../components/Timeline';
 import Topic from '../components/Topic';
+import InfoBox from '../components/InfoBox';
+import WorkIcon from '../components/WorkIcon';
+import EducationIcon from '../components/EducationIcon';
+
+import * as education from '../data/education';
+import * as experience from '../data/professionalExperience';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-        group(field: frontmatter___type) {
-          edges {
-            node {
-              frontmatter {
-                title
-                path
-                description
-              }
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              date
+              description
+              longDescription
+              source
+              url
+              image
             }
           }
-          fieldValue
         }
       }
     }
   `);
-  const projects = data.allMarkdownRemark.group
-    .filter((item) => item.fieldValue === 'pro')
-    .map((item) => {
-      return item.edges;
-    })[0];
-  const education = data.allMarkdownRemark.group
-    .filter((item) => item.fieldValue === 'edu')
-    .map((item) => {
-      return item.edges;
-    })[0];
-  const experience = data.allMarkdownRemark.group
-    .filter((item) => item.fieldValue === 'exp')
-    .map((item) => {
-      return item.edges;
-    })[0];
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -55,7 +58,7 @@ const IndexPage = () => {
       <Topic>
         <h1>Projects</h1>
         <CardContainer>
-          {projects.map((project, id) => (
+          {data.allMarkdownRemark.edges.map((project, id) => (
             <Card
               title={project.node.frontmatter.title}
               linksTo={project.node.frontmatter.path}
@@ -75,14 +78,13 @@ const IndexPage = () => {
         >
           <Timeline
             data={education}
-            image={require('../images/education-icon.png')}
-            altText="education-icon"
+            image={<EducationIcon width="5em" height="5em" fill="#fff" />}
           />
           <Timeline
             data={experience}
-            image={require('../images/work-icon.png')}
-            altText="working-icon"
+            image={<WorkIcon width="5em" height="5em" fill="#fff" />}
           />
+          <InfoBox />
         </div>
       </Topic>
     </Layout>

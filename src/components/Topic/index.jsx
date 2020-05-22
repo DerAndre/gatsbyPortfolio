@@ -1,3 +1,12 @@
+/*
+ * @Script: index.jsx
+ * @Author: Andre Litty
+ * @Email: alittysw@gmail.com
+ * @Create At: 2020-05-22 22:09:04
+ * @Last Modified By: Andre Litty
+ * @Last Modified At: 2020-05-22 22:09:04
+ * @Description: Topic component.
+ */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
