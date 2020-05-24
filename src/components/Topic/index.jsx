@@ -31,7 +31,7 @@ const Section = styled.section`
 
 const Topic = ({ title, children }) => (
   <Section>
-    <h1>{title}</h1>
+    {title ? <h1>{title}</h1> : null}
     {children}
   </Section>
 );

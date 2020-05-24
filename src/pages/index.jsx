@@ -64,7 +64,6 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <Topic title="Hi people">
-        <Avatar />
         <p>
           Welcome at Andres! Andre, thats me, a freelancing Full Stack Engineer
           who works 100% remotely!
