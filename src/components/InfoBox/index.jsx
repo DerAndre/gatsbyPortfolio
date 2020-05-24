@@ -4,7 +4,7 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:07:58
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-22 22:53:24
+ * @Last Modified At: 2020-05-24 12:26:20
  * @Description: InfoBox component.
  */
 import React from 'react';

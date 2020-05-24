@@ -4,7 +4,7 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:07:13
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-22 22:07:13
+ * @Last Modified At: 2020-05-24 14:07:39
  * @Description: Layout component.
  */
 import React from 'react';
@@ -21,6 +21,7 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   padding: 1.45rem 2rem 0 2rem;
+  margin-bottom: 4rem;
   background-color: ${constants.darkBackground};
 `;
 

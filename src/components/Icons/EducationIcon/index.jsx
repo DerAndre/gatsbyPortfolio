@@ -4,13 +4,19 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:10:17
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-22 22:10:17
+ * @Last Modified At: 2020-05-24 15:11:47
  * @Description: EducationIcon component.
  */
 import React from 'react';
 
-const EducationIcon = ({ width, height, fill }) => (
-  <svg height={height} viewBox="0 0 60 59" width={width} fill={fill}>
+const EducationIcon = ({ width, height, fill, additionalStye }) => (
+  <svg
+    height={height}
+    viewBox="0 0 60 59"
+    width={width}
+    fill={fill}
+    style={additionalStye}
+  >
     <g id="Page-1" fill={fill} fillRule="evenodd">
       <g id="026---Idea" fill={fill} fillRule="nonzero">
         <path

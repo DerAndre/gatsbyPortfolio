@@ -4,7 +4,7 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:06:52
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-22 22:25:48
+ * @Last Modified At: 2020-05-24 14:05:44
  * @Description: Timeline component.
  */
 import React from 'react';
@@ -16,7 +16,7 @@ import { toggleInfoBox } from '../../state/actions';
 import * as constants from '../../constants';
 
 const Ul = styled.ul`
-  margin-left: 0px;
+  margin: 0px;
   text-align: center;
 `;
 

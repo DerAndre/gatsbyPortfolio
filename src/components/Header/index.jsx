@@ -4,7 +4,7 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:06:35
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-22 22:40:58
+ * @Last Modified At: 2020-05-24 15:18:46
  * @Description: Header component.
  */
 import { Link } from 'gatsby';
@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => (
     </H1>
     <Particles
       width={`100%`}
-      height={`15vh`}
+      height={`10em`}
       style={{
         position: `absolute`,
         top: `0px`,
@@ -55,11 +55,11 @@ const Header = ({ siteTitle }) => (
             value: 50,
           },
           color: {
-            value: '#fff',
+            value: `${constants.darkBackground}`,
           },
           lineLinked: {
             enable: true,
-            color: '#d20000',
+            color: `${constants.red}`,
           },
           size: {
             value: 4,
