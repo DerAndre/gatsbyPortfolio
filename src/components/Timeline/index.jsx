@@ -4,7 +4,7 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:06:52
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-24 14:05:44
+ * @Last Modified At: 2020-05-29 16:52:24
  * @Description: Timeline component.
  */
 import React from 'react';
@@ -18,6 +18,13 @@ import * as constants from '../../constants';
 const Ul = styled.ul`
   margin: 0px;
   text-align: center;
+`;
+
+const TimeLineText = styled.p`
+  line-break: anywhere;
+  line-height: normal;
+  font-size: medium;
+  margin: 0 5px 0 5px;
 `;
 
 const Li = styled.li`
@@ -48,17 +55,13 @@ const Li = styled.li`
     display: none;
   }
   &:hover {
-    background: ${constants.red};
-    box-shadow: 0 0 10em 2em ${constants.red};
+    background: ${constants.darkGray};
+    box-shadow: 0 0 50rem 1rem ${constants.red};
     cursor: pointer;
+    & p {
+      text-shadow: 6px 6px 4px black;
+    }
   }
-`;
-
-const TimeLineText = styled.p`
-  line-break: anywhere;
-  line-height: normal;
-  font-size: medium;
-  margin: 0 5px 0 5px;
 `;
 
 const Timeline = ({ dispatch, data = [], image }) => {

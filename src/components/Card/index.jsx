@@ -4,7 +4,7 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:05:59
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-22 22:51:59
+ * @Last Modified At: 2020-05-29 16:56:22
  * @Description: Card component.
  */
 import React from 'react';
@@ -37,6 +37,7 @@ const StyledCard = styled.div`
 
 const CardTitle = styled.p`
   font-size: large;
+  text-shadow: 1px 1px 1px black;
 `;
 
 const CardText = styled.p`

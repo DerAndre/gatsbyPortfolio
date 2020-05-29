@@ -4,7 +4,7 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:07:58
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-24 12:26:20
+ * @Last Modified At: 2020-05-29 16:35:21
  * @Description: InfoBox component.
  */
 import React from 'react';
@@ -28,8 +28,8 @@ const Box = styled.div`
   text-align: center;
   padding: 10px;
   margin: 0px 10px 10px 0px;
-  box-shadow: 0px 0 1rem 0.3rem ${constants.red};
-  background-color: ${constants.green};
+  box-shadow: 0px 0 0.5rem 0.1rem ${constants.red};
+  background-color: ${constants.darkGray};
   @media (max-width: 480px) {
     width: 20rem;
     height: auto;

@@ -61,12 +61,13 @@ const ProjectSource = ({ link }) =>
     </Span>
   ) : null;
 
-const ProjectImage = ({ image }) =>
+const ProjectImage = ({ image, rounded }) =>
   image ? (
     <img
-      width="100px"
-      height="100px"
+      width="120px"
+      height="120px"
       src={require(`../images/${image}`)}
+      style={{ borderRadius: rounded ? '50%' : '0px' }}
       alt="Project Logo"
     />
   ) : null;
@@ -74,7 +75,6 @@ const ProjectImage = ({ image }) =>
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-
   return (
     <Layout>
       <SEO title={frontmatter.title} />
@@ -89,7 +89,7 @@ export default function Template({ data }) {
           </Link>
           <H1>{frontmatter.title}</H1>
         </Span>
-        <ProjectImage image={frontmatter.image} />
+        <ProjectImage image={frontmatter.image} rounded={frontmatter.rounded} />
         <p>{frontmatter.longDescription}</p>
       </Topic>
       <Topic>
@@ -115,6 +115,7 @@ export const pageQuery = graphql`
         url
         source
         image
+        rounded
       }
     }
   }
