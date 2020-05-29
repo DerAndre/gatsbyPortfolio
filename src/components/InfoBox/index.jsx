@@ -4,7 +4,7 @@
  * @Email: alittysw@gmail.com
  * @Create At: 2020-05-22 22:07:58
  * @Last Modified By: Andre Litty
- * @Last Modified At: 2020-05-29 16:35:21
+ * @Last Modified At: 2020-05-29 17:56:29
  * @Description: InfoBox component.
  */
 import React from 'react';
@@ -19,9 +19,11 @@ const Box = styled.div`
   width: 40rem;
   height: 18rem;
   flex-direction: column;
-  position: absolute;
-  justify-self: center;
-  align-self: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -9rem !important;
+  margin-left: -20rem !important;
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
